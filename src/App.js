@@ -1,75 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const foodILike = [
-  {
-    id: 1,
-    name: 'Kimchi',
-    image:
-      'http://aeriskitchen.com/wp-content/uploads/2008/09/kimchi_bokkeumbap_02-.jpg',
-    rating: 4.9,
-  },
-  {
-    id: 2,
-    name: 'Samgyeopsal',
-    image:
-      'https://3.bp.blogspot.com/-hKwIBxIVcQw/WfsewX3fhJI/AAAAAAAAALk/yHxnxFXcfx4ZKSfHS_RQNKjw3bAC03AnACLcBGAs/s400/DSC07624.jpg',
-    rating: 4.9,
-  },
-  {
-    id: 3,
-    name: 'Bibimbap',
-    image:
-      'http://cdn-image.myrecipes.com/sites/default/files/styles/4_3_horizontal_-_1200x900/public/image/recipes/ck/12/03/bibimbop-ck-x.jpg?itok=RoXlp6Xb',
-    rating: 4.8,
-  },
-  {
-    id: 4,
-    name: 'Doncasu',
-    image:
-      'https://s3-media3.fl.yelpcdn.com/bphoto/7F9eTTQ_yxaWIRytAu5feA/ls.jpg',
-    rating: 5.0,
-  },
-  {
-    id: 5,
-    name: 'Kimbap',
-    image:
-      'http://cdn2.koreanbapsang.com/wp-content/uploads/2012/05/DSC_1238r-e1454170512295.jpg',
-    rating: 4.7,
-  },
-];
+class App extends React.Component {
+  // ! App은 React.Component를 extends해야만 함
+  state = {
+    count: 0,
+  };
+  // * App 클래스에 속한 state 오브젝트, 변하는 데이터를 담는다
+  add = () => {
+    this.setState((current) => ({ count: current.count + 1 }));
+    // * setState(updater[, callback]), virtual DOM을 활용하여 비동기로 state가 바뀐 후 다시 render 호출
+    // * current = App.state
+  };
+  minus = () => {
+    this.setState((current) => ({ count: current.count - 1 }));
+  };
 
-function Food({ name, picture, rating }) {
-  // * prop = { name, picture, rating }
-  return (
-    <div>
-      <h2>I like {name}</h2>
-      <h4>{rating}/5.0</h4>
-      <img src={picture} alt={name} />
-    </div>
-  );
-}
-
-Food.propTypes = {
-  name: PropTypes.string.isRequired,
-  picture: PropTypes.string.isRequired,
-  rating: PropTypes.number,
-};
-
-function App() {
-  return (
-    <div>
-      {foodILike.map((dish) => (
-        <Food
-          key={dish.id}
-          name={dish.name}
-          picture={dish.image}
-          rating={dish.rating}
-        />
-        // * key prop은 Food 객체에 전달되지 않고 react 내부에서만 쓰임
-      ))}
-    </div>
-  );
+  // ! Component Life Cycle
+  componentDidMount() {
+    console.log('Component rendered');
+  }
+  // * Component가 처음 render될 때(mount) 호출
+  componentDidUpdate() {
+    console.log('I just updated');
+  }
+  componentWillUnmount() {
+    console.log('Goodbye, cruel world');
+  }
+  // * Component가 더 이상 사용되지 않을 때, 페이지를 떠날 때(unmount) 호출
+  render() {
+    // ! react는 자동적으로 class component의 render method를 실행한다
+    console.log("I'm rendering");
+    return (
+      <div>
+        <h1>The number is: {this.state.count}</h1>
+        <button onClick={this.add}>Add</button>
+        <button onClick={this.minus}>Minus</button>
+      </div>
+    );
+  }
 }
 
 export default App;
