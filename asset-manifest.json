@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/clone_movieapp_react/static/css/main.a583c5fa.chunk.css",
-    "main.js": "/clone_movieapp_react/static/js/main.f70c0a8c.chunk.js",
-    "main.js.map": "/clone_movieapp_react/static/js/main.f70c0a8c.chunk.js.map",
+    "main.js": "/clone_movieapp_react/static/js/main.b224370a.chunk.js",
+    "main.js.map": "/clone_movieapp_react/static/js/main.b224370a.chunk.js.map",
     "runtime-main.js": "/clone_movieapp_react/static/js/runtime-main.34f9dc2f.js",
     "runtime-main.js.map": "/clone_movieapp_react/static/js/runtime-main.34f9dc2f.js.map",
     "static/js/2.d8c9a3f6.chunk.js": "/clone_movieapp_react/static/js/2.d8c9a3f6.chunk.js",
     "static/js/2.d8c9a3f6.chunk.js.map": "/clone_movieapp_react/static/js/2.d8c9a3f6.chunk.js.map",
     "index.html": "/clone_movieapp_react/index.html",
-    "precache-manifest.7464759bd1bb06c3203b8752820a0ec7.js": "/clone_movieapp_react/precache-manifest.7464759bd1bb06c3203b8752820a0ec7.js",
+    "precache-manifest.d574bcbee9f785075c070648a1976ff9.js": "/clone_movieapp_react/precache-manifest.d574bcbee9f785075c070648a1976ff9.js",
     "service-worker.js": "/clone_movieapp_react/service-worker.js",
     "static/css/main.a583c5fa.chunk.css.map": "/clone_movieapp_react/static/css/main.a583c5fa.chunk.css.map",
     "static/js/2.d8c9a3f6.chunk.js.LICENSE.txt": "/clone_movieapp_react/static/js/2.d8c9a3f6.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.34f9dc2f.js",
     "static/js/2.d8c9a3f6.chunk.js",
     "static/css/main.a583c5fa.chunk.css",
-    "static/js/main.f70c0a8c.chunk.js"
+    "static/js/main.b224370a.chunk.js"
   ]
 }
