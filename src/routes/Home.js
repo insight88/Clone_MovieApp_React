@@ -14,7 +14,7 @@ class App extends React.Component {
         data: { movies },
       },
     } = await axios.get(
-      'https://yts.mx/api/v2/list_movies.json?sort_by=rating',
+      'https://yts.unblockit.lat/api/v2/list_movies.json',
     );
     this.setState({ movies, isLoading: false });
   };
